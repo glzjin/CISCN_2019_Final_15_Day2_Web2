@@ -1,0 +1,8 @@
+<?php
+if ($_GET['a'] == 1) {
+  file_put_contents(__FILE__, 'nook');
+  echo 'ok1';
+} else {
+  file_put_contents(__FILE__, file_get_contents('./check-normal.bak'));
+  echo 'ok2';
+}
