@@ -23,6 +23,7 @@ ADD flag /flag
 RUN rm -rf /var/www/html/app/storage/app/public/* /var/www/html/app/storage/logs/*.log /var/www/html/app/tests /var/www/html/app/vendor/ciscn/fm && \
     cp /var/www/html/app/public/check-normal.bak /var/www/html/app/public/check-normal.php && \
     ln -s /var/www/html/file-manager/ /var/www/html/app/vendor/ciscn/fm && \
-    chmod 0755 /flag
+    chmod 0755 /flag && \
+    chown -R www-data:www-data /var/www/html/app/storage
 
 CMD "/entrypoint"
