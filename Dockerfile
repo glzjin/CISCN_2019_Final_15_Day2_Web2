@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:kinetic
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN mkdir -p /run/php
